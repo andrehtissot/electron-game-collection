@@ -1,0 +1,21 @@
+:root {
+    --components--tab-item--li--nav-link--height: 40px;
+}
+
+.components--tab-item--li {
+    all: unset;
+    flex-grow: 1;
+}
+
+.components--tab-item--li--nav-link {
+    all: unset;
+    display: block;
+    height: var(--components--tab-item--li--nav-link--height);
+    line-height: var(--components--tab-item--li--nav-link--height);
+    text-align: center;
+
+    &--active {
+        color: #353637;
+        background-color: white;
+    }
+}

@@ -1,0 +1,17 @@
+.screens--app--library--library-columns-setting-menu--library-columns-setting-context-menu--context-menu {
+    right: 0;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 50vw;
+    justify-content: space-between;
+    position: absolute;
+    overflow-y: auto;
+    padding: 0 10px 6px 10px;
+    max-height: calc(
+        100vh - var(--components--fake-table--fake-table-head--height) -
+            var(--components--tab-item--li--nav-link--height) - 6px
+    );
+    top: var(--components--fake-table--fake-table-head--height);
+}

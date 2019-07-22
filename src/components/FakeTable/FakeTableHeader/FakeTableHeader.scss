@@ -1,0 +1,10 @@
+.components--fake-table--fake-table-header {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e8e9eb;
+    line-height: var(--components--fake-table--fake-table-head--height);
+    height: var(--components--fake-table--fake-table-head--height);
+}

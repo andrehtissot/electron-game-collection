@@ -1,0 +1,19 @@
+:root {
+    --components--icon-button--min-height: 40px;
+    --components--icon-button--min-width: 20px;
+    --components--icon-button--pressed--background-color: #353637;
+}
+
+.components--icon-button,
+.components--icon-button--pressed {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    line-height: 40px;
+    min-width: var(--components--icon-button--min-height);
+}
+
+.components--icon-button--pressed {
+    background-color: var(--components--icon-button--pressed--background-color);
+    color: #f0f0f0;
+}

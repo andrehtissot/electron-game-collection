@@ -1,0 +1,20 @@
+:root {
+    --screens--app--library--library-table-header--library-table-settings-header--fake-table-header--min-width: 60px;
+}
+
+.screens--app--library--library-table-header--library-table-settings-header--fake-table-header {
+    width: var(
+        --screens--app--library--library-table-header--library-table-settings-header--fake-table-header--min-width
+    );
+
+    &--selected {
+        width: var(
+            --screens--app--library--library-table-header--library-table-settings-header--fake-table-header--min-width
+        );
+        background-color: var(--components--icon-button--pressed--background-color);
+    }
+
+    &--icon-button {
+        width: 100%;
+    }
+}

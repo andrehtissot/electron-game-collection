@@ -1,0 +1,15 @@
+:root {
+    --components--fake-table--fake-table-head--height: 40px;
+}
+
+.components--fake-table--fake-table-head--div {
+    display: block;
+    padding: 0;
+    font-weight: normal;
+    color: #353637;
+    white-space: nowrap;
+    min-width: 100%;
+    text-align: center;
+    top: 0;
+    height: var(--components--fake-table--fake-table-head--height);
+}

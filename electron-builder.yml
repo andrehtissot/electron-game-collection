@@ -1,0 +1,15 @@
+appId: 'com.andretissot.electron-game-collection'
+productName: 'GameCollection'
+asar: false
+directories:
+    app: 'dist'
+    output: 'out'
+    buildResources: 'res'
+linux:
+    executableName: 'GameCollection'
+    category: 'Games'
+win:
+    icon: 'app-icon/256x256.ico'
+mac:
+    identity: null
+    icon: 'app-icon/AppIcon.icns'

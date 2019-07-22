@@ -1,0 +1,4 @@
+.components--table--table-body-left-cell {
+    padding: 0 calc(var(--components--table--table-body--tr--height) / 2);
+    height: var(--components--table--table-body--tr--height);
+}

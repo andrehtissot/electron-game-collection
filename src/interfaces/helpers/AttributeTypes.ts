@@ -1,0 +1,10 @@
+export const AttributeTypes = {
+    BOOLEAN: 'BOOLEAN',
+    DATE: 'DATE',
+    NUMBER: 'NUMBER',
+    NUMBER_ARRAY: 'NUMBER_ARRAY',
+    OBJECT: 'OBJECT',
+    OBJECT_ARRAY: 'OBJECT_ARRAY',
+    STRING: 'STRING',
+    STRING_ARRAY: 'STRING_ARRAY',
+}

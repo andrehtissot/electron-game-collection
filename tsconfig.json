@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "baseUrl": "./src",
+        "esModuleInterop": true,
+        "jsx": "react",
+        "lib": ["dom", "es2018", "dom.iterable", "scripthost", "webworker"],
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "outDir": "./dist/",
+        "paths": {
+            "components/*": ["components/*"],
+            "configs/*": ["configs/*"],
+            "contexts/*": ["contexts/*"],
+            "helpers/*": ["helpers/*"],
+            "interfaces/*": ["interfaces/*"],
+            "routes/*": ["routes/*"],
+            "screens/*": ["screens/*"]
+        },
+        "removeComments": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "target": "es2018"
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

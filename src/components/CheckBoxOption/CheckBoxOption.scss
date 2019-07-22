@@ -1,0 +1,11 @@
+.components--check-box-option {
+    &--label {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &--icon-button {
+        display: inline-block;
+    }
+}

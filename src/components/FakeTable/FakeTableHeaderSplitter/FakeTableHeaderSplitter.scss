@@ -1,0 +1,15 @@
+:root {
+    --components--fake-table--fake-table-header-splitter--width: 4px;
+}
+
+.components--fake-table--fake-table-header-splitter {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    cursor: col-resize;
+    background-color: #fff;
+    line-height: var(--components--fake-table--fake-table-head--height);
+    height: var(--components--fake-table--fake-table-head--height);
+    min-width: var(--components--fake-table--fake-table-header-splitter--width);
+}

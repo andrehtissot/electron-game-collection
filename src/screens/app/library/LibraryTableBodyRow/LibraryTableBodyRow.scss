@@ -1,0 +1,30 @@
+@mixin screens--app--library--library-table-body-row--div {
+    height: var(--components--table--table-body--tr--height);
+    &:hover {
+        background-color: var(--components--table--table-body--tr--hover--background-color);
+        color: var(--components--table--table-body--tr--hover--color);
+    }
+    & > div {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: var(--components--table--table-body--tr--height);
+    }
+}
+
+.screens--app--library--library-table-body-row--div {
+    @include screens--app--library--library-table-body-row--div;
+
+    &--even {
+        @include screens--app--library--library-table-body-row--div;
+        background-color: var(--components--table--table-body--tr--even--background-color);
+    }
+}
+
+.screens--app--library--library-table-body-row--settings-div {
+    cursor: pointer;
+    user-select: none;
+    line-height: var(--components--icon-button--min-height);
+    min-width: var(--components--icon-button--min-width);
+}

@@ -1,0 +1,12 @@
+.screens--app--overview--game-card--div {
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 100%;
+
+    & > img {
+        height: 100%;
+        width: 100%;
+    }
+}
