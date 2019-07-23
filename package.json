@@ -107,7 +107,8 @@
         "react-window": "^1.8.5",
         "regexpu-core": "^4.5.4",
         "update-electron-app": "^1.5.0",
-        "uuid": "^3.3.2"
+        "uuid": "^3.3.2",
+        "lodash": ">=4.17.15"
     },
     "husky": {
         "hooks": {
