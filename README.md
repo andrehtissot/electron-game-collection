@@ -1,3 +1,8 @@
+[![GitHub license](https://img.shields.io/github/license/andrehtissot/electron-game-collection.svg)](https://github.com/andrehtissot/electron-game-collection/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/andrehtissot/electron-game-collection.svg)](https://github.com/andrehtissot/electron-game-collection/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/andrehtissot/electron-game-collection/badge.svg?targetFile=package.json)](https://snyk.io/test/github/andrehtissot/electron-game-collection?targetFile=package.json)
+[![DeepScan grade](https://deepscan.io/api/teams/3417/projects/6527/branches/54967/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3417&pid=6527&bid=54967)
+
 # The Project
 Having more than a couple of computer games can get difficult to manage, specially when the collection is divided between many different stores.
 
