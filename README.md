@@ -3,6 +3,20 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/andrehtissot/electron-game-collection/badge.svg?targetFile=package.json)](https://snyk.io/test/github/andrehtissot/electron-game-collection?targetFile=package.json)
 [![DeepScan grade](https://deepscan.io/api/teams/3417/projects/6527/branches/54967/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=3417&pid=6527&bid=54967)
 
+# How to Build and Run
+The most simplest way to build it as a complete package is by running this script:
+```bash
+mkdir ~/game-collection
+cd ~/game-collection
+git clone https://github.com/andrehtissot/electron-game-collection.git
+git clone https://github.com/andrehtissot/electron-game-collection-server.git
+git clone https://github.com/andrehtissot/electron-game-collection-steam-plugin.git
+cd electron-game-collection
+npm install
+npm run build-release
+```
+And within `~/game-collection/out`, you shall find the directory with the binary ready.
+
 # The Project
 Having more than a couple of computer games can get difficult to manage, specially when the collection is divided between many different stores.
 
