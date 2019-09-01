@@ -6,8 +6,8 @@ import {
 import { IPluginsHooks } from 'contexts/PluginsContext'
 import { IGameKey } from 'interfaces/IGame'
 import * as React from 'react'
-import { Game } from 'storage/game/Game'
-import { enhanceGamesData } from '../LibraryTableBodyRow/enhanceGamesData'
+import { getGamesSortedBy } from 'storage/game/Game'
+import { enhanceGameData } from '../LibraryTableBodyRow/enhanceGameData'
 import { getMenuOptions } from './getMenuOptions'
 import { LibraryColumnsSettingContextMenu } from './LibraryColumnsSettingContextMenu/LibraryColumnsSettingContextMenu'
 import './LibraryColumnsSettingMenu.scss'
@@ -23,8 +23,12 @@ interface ILibraryColumnsSettingMenuProps extends React.Props<{}> {
 export const LibraryColumnsSettingMenu = (props: ILibraryColumnsSettingMenuProps): React.ReactElement<object> => {
     const { visibleColumns, setVisibleColumn, reloadGames, pluginsHooks } = props
     const onUpdateAllClick = async () => {
-        const games = await Game.toArray()
-        await enhanceGamesData(games, pluginsHooks)
+        const games = await getGamesSortedBy(['platforms', true])
+        for (const game of games) {
+            console.time(`Enhanced ${game.title}`)
+            await enhanceGameData(game, pluginsHooks)
+            console.timeEnd(`Enhanced ${game.title}`)
+        }
         reloadGames()
     }
     return (
