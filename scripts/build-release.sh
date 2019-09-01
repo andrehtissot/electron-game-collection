@@ -49,10 +49,11 @@ cp -r $STEAM_PLUGIN_PROJECT_DIST_DIR $STEAM_PLUGIN_DIR
 cd $DIST_DIR
 npm install --save $EXTRA_DEPENDENCIES
 cd $ROOT_DIR
+electron-builder --dir # for current OS unpacked
 # electron-builder --linux --dir # linux unpacked
-electron-builder --linux tar.gz --x64 # linux tgz 64 bits
+# electron-builder --linux tar.gz --x64 # linux tgz 64 bits
 # electron-builder --mac --dir # mac unpacked
-electron-builder --mac zip # mac dmg
-# electron-builder --windows --dir # windows unpacked
-electron-builder --windows zip --x64 # windows zip 64 bits
-electron-builder --windows zip --ia32 # windows zip 32 bits
+# electron-builder --mac zip # mac dmg
+# # electron-builder --windows --dir # windows unpacked
+# electron-builder --windows zip --x64 # windows zip 64 bits
+# electron-builder --windows zip --ia32 # windows zip 32 bits
