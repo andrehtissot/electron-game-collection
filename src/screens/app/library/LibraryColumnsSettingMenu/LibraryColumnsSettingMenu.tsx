@@ -4,6 +4,7 @@ import {
     LibraryScreenSettingsContext,
 } from 'contexts/LibraryScreenSettingsContext'
 import { IPluginsHooks } from 'contexts/PluginsContext'
+import { parallelize } from 'helpers/parallelize'
 import { IGameKey } from 'interfaces/IGame'
 import * as React from 'react'
 import { getGamesSortedBy } from 'storage/game/Game'
@@ -24,11 +25,15 @@ export const LibraryColumnsSettingMenu = (props: ILibraryColumnsSettingMenuProps
     const { visibleColumns, setVisibleColumn, reloadGames, pluginsHooks } = props
     const onUpdateAllClick = async () => {
         const games = await getGamesSortedBy(['platforms', true])
-        for (const game of games) {
-            console.time(`Enhanced ${game.title}`)
-            await enhanceGameData(game, pluginsHooks)
-            console.timeEnd(`Enhanced ${game.title}`)
-        }
+        await parallelize(
+            games,
+            async (game) => {
+                console.time(`Enhanced ${game.title}`)
+                await enhanceGameData(game, pluginsHooks)
+                console.timeEnd(`Enhanced ${game.title}`)
+            },
+            { maxThreadsCount: 4 }
+        )
         reloadGames()
     }
     return (

@@ -1,12 +1,14 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require('electron')
 const path = require('path')
+const { existsSync } = require('fs')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 global.mainWindow = mainWindow
 const rootPath = __dirname.endsWith('app') ? __dirname : path.join(__dirname, 'dist')
+const serverIndexPath = path.join(__dirname, 'server', 'index.js')
 
 const createWindow = () => {
     if (!process.argv.includes('--debug') && process.platform !== 'darwin') {
@@ -48,7 +50,9 @@ const createWindow = () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
-    require('./server/index')
+    if (existsSync(serverIndexPath)) {
+        require(serverIndexPath)
+    }
     createWindow()
 })
 

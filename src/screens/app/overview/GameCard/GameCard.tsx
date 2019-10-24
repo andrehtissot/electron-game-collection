@@ -9,7 +9,7 @@ interface IGameCardProps extends React.Props<{}> {
     style?: React.CSSProperties
 }
 
-const EXTRA_IMG_ATTRIBUTES = {
+const EXTRA_IMG_ATTRIBUTES: any = {
     loading: 'lazy',
 }
 
@@ -26,6 +26,7 @@ export const GameCard = (props: IGameCardProps): React.ReactElement<object> => {
     const style: React.CSSProperties = { ...props.style }
     if (style && style.height) {
         style.lineHeight = `${style.height}px`
+        EXTRA_IMG_ATTRIBUTES.height = `${style.height}px`
     }
 
     let content
