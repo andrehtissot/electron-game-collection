@@ -5,7 +5,7 @@ import {
 } from 'contexts/LibraryScreenSettingsContext'
 import { IPluginsHooks } from 'contexts/PluginsContext'
 import { parallelize } from 'helpers/parallelize'
-import { IGameKey } from 'interfaces/IGame'
+import { IGame, IGameKey } from 'interfaces/IGame'
 import * as React from 'react'
 import { getGamesSortedBy } from 'storage/game/Game'
 import { enhanceGameData } from '../LibraryTableBodyRow/enhanceGameData'
@@ -27,7 +27,7 @@ export const LibraryColumnsSettingMenu = (props: ILibraryColumnsSettingMenuProps
         const games = await getGamesSortedBy(['platforms', true])
         await parallelize(
             games,
-            async (game) => {
+            async (game: IGame) => {
                 console.time(`Enhanced ${game.title}`)
                 await enhanceGameData(game, pluginsHooks)
                 console.timeEnd(`Enhanced ${game.title}`)
