@@ -33,7 +33,7 @@ export const GameCard = (props: IGameCardProps): React.ReactElement<object> => {
     if (overviewImagePath && overviewImagePath.length) {
         content = <img src={getFullImagePath(overviewImagePath)} alt={title} title={title} {...EXTRA_IMG_ATTRIBUTES} />
     } else {
-        content = <>{title}</>
+        content = <div title={title}>{title}</div>
     }
 
     return (
