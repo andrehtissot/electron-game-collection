@@ -32,7 +32,7 @@ export const LibraryColumnsSettingMenu = (props: ILibraryColumnsSettingMenuProps
                 await enhanceGameData(game, pluginsHooks)
                 console.timeEnd(`Enhanced ${game.title}`)
             },
-            { maxThreadsCount: 4 }
+            { maxThreadsCount: 600 }
         )
         reloadGames()
     }
