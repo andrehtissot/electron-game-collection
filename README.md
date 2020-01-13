@@ -10,7 +10,6 @@ mkdir ~/game-collection
 cd ~/game-collection
 git clone https://github.com/andrehtissot/electron-game-collection.git
 git clone https://github.com/andrehtissot/electron-game-collection-server.git
-git clone https://github.com/andrehtissot/electron-game-collection-steam-plugin.git
 cd electron-game-collection
 npm install
 npm run build-release
