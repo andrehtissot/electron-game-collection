@@ -179,4 +179,3 @@ It is designed to be extendable, and more stores and or optional features would 
 
 # The Other Repos
 - [Backend (node)](https://github.com/andrehtissot/electron-game-collection-server)
-- [Steam plugin (frontend & backend)](https://github.com/andrehtissot/electron-game-collection-steam-plugin)
