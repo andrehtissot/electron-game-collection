@@ -96,13 +96,15 @@ And its edit settings, workarounded by exporting and importing CSVs.
 
 ## Screens
 ### Overview
-This screen presents, in a grid, all the games in the database, with the overview image, if available, or the game title.
+This screen presents, in a grid, all the games in the database, with the overview image, if available, or the game title. 
 
 On the left top of the screen you can select one of the properties and if is sorted asc or desc.
 
 The tile size is resizable and they respond to window width, avoiding wasting space.
 
-![overview screen on linux](https://user-images.githubusercontent.com/1174345/61177165-bfba1480-a5ce-11e9-9444-5ed25396bd49.jpg)
+The image bellow has it's tiles here pixelated to avoid copyright issues, as the game tiles images presented are not part of the software, hence not covered by its MIT license.
+
+![overview screen on linux](https://user-images.githubusercontent.com/1174345/72255467-18627c80-3607-11ea-8070-9dbe73c37ec8.jpg)
 
 ### Library
 This screen presents in a table all the values of the enabled properties.
