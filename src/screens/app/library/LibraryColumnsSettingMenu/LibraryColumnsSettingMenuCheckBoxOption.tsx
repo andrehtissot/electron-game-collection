@@ -1,3 +1,1 @@
-export {
-    LibraryColumnsSettingMenuCheckBoxOption,
-} from './LibraryColumnsSettingMenuCheckBoxOption/LibraryColumnsSettingMenuCheckBoxOption'
+export { LibraryColumnsSettingMenuCheckBoxOption } from './LibraryColumnsSettingMenuCheckBoxOption/LibraryColumnsSettingMenuCheckBoxOption'

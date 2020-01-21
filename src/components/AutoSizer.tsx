@@ -8,7 +8,7 @@ export interface IAutoSizerChildrenParams {
 
 interface IAutoSizerProps extends React.Props<{}> {
     snooze?: number
-    children({  }: IAutoSizerChildrenParams): React.ReactElement<object>
+    children({}: IAutoSizerChildrenParams): React.ReactElement<object>
 }
 
 export const AutoSizer = (props: IAutoSizerProps): React.ReactElement<object> => {
