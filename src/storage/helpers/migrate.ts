@@ -1,9 +1,5 @@
 import { default as Dexie } from 'dexie'
 
-interface ITransaction extends Dexie.Transaction {
-    AppSettings: Dexie.Table<{ setting: string; value: object }, object>
-}
-
 export const migrate = async (DB: Dexie, DB_NAME: string): Promise<void> => {
     DB.version(1).stores({ AppSettings: 'setting' })
     DB.version(1).stores({

@@ -28,8 +28,9 @@ export const applyRelativeWidthByColumn = (
     for (let index = 1; index < visibleColumns.length + 1; index++) {
         rules.push(
             `
-.screens--app--library--library-screen .components--fake-table--fake-table-header:nth-of-type(${index * 2 -
-                1}) ${getWidthRule(relativeWidthByColumn[visibleColumns[index - 1]])}`,
+.screens--app--library--library-screen .components--fake-table--fake-table-header:nth-of-type(${
+                index * 2 - 1
+            }) ${getWidthRule(relativeWidthByColumn[visibleColumns[index - 1]])}`,
             `
 .screens--app--library--Library-table-body--div > div > div > div > div:nth-of-type(${index}) ${getWidthRule(
                 relativeWidthByColumn[visibleColumns[index - 1]],
