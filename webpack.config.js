@@ -64,7 +64,9 @@ module.exports = (env, argv) => {
             new HtmlWebpackPlugin({
                 template: srcPath('index.ejs.html'),
             }),
-            new CopyPlugin([{ from: 'res/app-icon/48x48.ico', to: 'favicon.ico' }]),
+            new CopyPlugin({
+                patterns: [{ from: 'res/app-icon/48x48.ico', to: 'favicon.ico' }],
+            }),
         ],
         optimization: {
             splitChunks: {
