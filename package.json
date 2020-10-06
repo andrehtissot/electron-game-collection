@@ -57,7 +57,7 @@
         "copy-webpack-plugin": "^6.0.2",
         "css-loader": "^3.6.0",
         "devtron": "^1.4.0",
-        "electron": "^9.0.5",
+        "electron": "^9.3.0",
         "electron-builder": "^22.7.0",
         "electron-log": "^4.2.2",
         "electron-settings": "^4.0.1",
