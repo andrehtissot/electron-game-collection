@@ -33,6 +33,16 @@ module.exports = (env, argv) => {
         module: {
             rules: [
                 {
+                    test: /\.worker\.ts$/,
+                    use: {
+                        loader: 'worker-loader',
+                        options: {
+                            filename: 'workers/[name].js',
+                            chunkFilename: 'workers/[id].js',
+                        },
+                    },
+                },
+                {
                     test: /\.tsx?$/,
                     loader: 'awesome-typescript-loader',
                     exclude: /node_modules/,

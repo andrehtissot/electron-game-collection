@@ -24,7 +24,7 @@ STEAM_PLUGIN_DIR="$PLUGINS_DIR/steam"
 ## FRONTEND
 cd $ROOT_DIR
 rm -rf $DIST_DIR
-npm run build
+npx webpack --mode production --progress --colors
 cp $ROOT_DIR/main.js $DIST_DIR/main.js
 cp $ROOT_DIR/package.json $DIST_DIR/package.json
 npm install --only=prod
